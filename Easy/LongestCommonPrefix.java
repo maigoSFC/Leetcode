@@ -2,6 +2,10 @@
 
 // If there is no common prefix, return an empty string "".
 
+// use the first string in the array as the base, then use that to compare with the other strings in the array
+// with the for each loop. Have to check if if the index is in the length or else out of bound, and if it's the same
+// letter or not. if either case fails it will break out of the loop. End value should be the end of the prefix.
+
 class Solution {
     public String longestCommonPrefix(String[] strs) {
         String base = strs[0];
