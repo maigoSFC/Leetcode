@@ -1,5 +1,7 @@
 // Convert Roman numbers to Integer format
 
+// Defined what each roman numerical in the string is worth in integer value, store the values in an array. Check whether the following index 
+// is larger, if so then subtract, otherwise add.
 class Solution {
     public int romanToInt(String s) {
         // int counter = recursion(0, 0, s);
