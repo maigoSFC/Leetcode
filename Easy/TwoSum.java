@@ -24,17 +24,12 @@ class Solution {
         HashMap<Integer, Integer> h = new HashMap<Integer, Integer>();
         
         for (int i = 0; i < nums.length; i++) {
-            h.put(nums[i], i);
-        }
-        
-        for (int i = 0; i < nums.length; i++) {
             int remainder = target - nums[i];
             
             if (h.containsKey(remainder)) {
-                int index = h.get(remainder);
-                if (index != i) {
-                    return new int[]{i, index};
-                }
+                return new int[]{h.get(remainder), i};
+            } else {
+                h.put(nums[i], i);
             }
         }
         
